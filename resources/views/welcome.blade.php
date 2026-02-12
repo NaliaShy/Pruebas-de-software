@@ -24,7 +24,7 @@
                 <h2>Pruebas de software</h2>
                 <p>En este módulo aprenderán qué son las pruebas de software, por qué son esenciales y cómo se planifican dentro de una estrategia de calidad. Analizaremos los distintos tipos de pruebas existentes, haciendo un enfoque práctico en las pruebas unitarias para validar el código a nivel de componentes.</p>
             </div>
-            <div class="main-right">
+            <div id="main-right">
                 <img src="{{ asset('img/pruebas-software-index.png') }}" alt="Imagen de pruebas de software" style="width: 100%; height: auto;">
             </div>
         </div>

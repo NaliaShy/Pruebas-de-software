@@ -89,17 +89,3 @@ main{
     padding:30px;
 }
 </style>
-<div class="menu-lateral" id="menu">
-    <span onclick="cerrarMenu()" style="cursor:pointer;">✖</span>
-    <h3>Desarrollo de contenidos</h3>
-    <ul>
-        <li><a href="/">Volver al inicio</a></li>
-        <li><a href="ActividadPrevia">Actividad de conocimientos previos</a></li>
-        <li><a href="Induccion">Inducción</a></li>
-        <li><a href="Estrategias_Prueba_Software">Estrategias de prueba</a></li>
-        <li><a href="Pruebas_Integracion">Pruebas de integración</a></li>
-        <li><a href="Pruebas_Unitarias">Pruebas unitarias</a></li>
-        <li><a href="Recursos">Recursos</a></li>
-        <li><a href="Actividad_Didactica">Actividad didáctica</a></li>
-    </ul>
-</div>

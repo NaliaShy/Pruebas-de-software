@@ -58,13 +58,13 @@ h1 {
 }
 
 
-.header-right{
+#header-right{
     display: flex;
     align-items: center;
     justify-items: center;
 }
 
-.header-right a{
+#header-right a{
     background-color: #4f46e5;
     padding: 15px;
     border-radius: 20px;
@@ -139,4 +139,97 @@ a{
 .induccion{
     display: flex;
     flex-direction: column;
+}
+
+/* ===== MENÚ LATERAL ESTILO EXACTO IMAGEN ===== */
+
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100%;
+    background: #d6e2f1;
+    box-shadow: 3px 0 12px rgba(0,0,0,0.25);
+    transition: left 0.35s ease;
+    overflow-y: auto;
+    z-index: 1000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.menu-lateral.active{
+    left: 0;
+}
+
+/* Barra superior */
+.menu-top{
+    background: #c4d4ea;
+    padding: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1a2a44;
+    border-bottom: 1px solid #b2c6e0;
+}
+
+/* Lista general */
+.menu-lateral ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral li{
+    padding: 12px 18px;
+    font-size: 14px;
+    color: #1a2a44;
+    border-bottom: 1px solid #c9d7ea;
+    transition: background 0.2s;
+}
+
+.menu-lateral li a{
+    text-decoration: none;
+    color: #1a2a44;
+    display: block;
+}
+
+/* Hover */
+.menu-lateral li:hover{
+    background: #c4d4ea;
+}
+
+/* Activo (como Introducción en la imagen) */
+.menu-lateral li.activo{
+    background: #b4cbe6;
+    font-weight: 600;
+}
+
+/* Submenú */
+.submenu{
+    background: #e8f1fb;
+}
+
+.submenu li{
+    padding-left: 35px;
+    font-size: 13px;
+}
+
+/* Icono circular */
+.icono{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+/* Botón cerrar */
+.cerrar{
+    font-size: 20px;
+    cursor: pointer;
+    padding: 12px;
+    display: block;
 }

@@ -21,7 +21,7 @@
 
     <section>
         <div class="contenedor">
-            <h2 class="titulo-pagina">Equipo de Trabajo</h2>
+            <h2 class="titulo-pagina" style="color: slateblue">Equipo de Trabajo</h2>
             
             <div class="tabla-container">
                 <table class="tabla-integrantes">

@@ -69,3 +69,15 @@ body {
     font-size: 14px;
     color: #b3b3b3;
 }
+.td-imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 2%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.td-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
