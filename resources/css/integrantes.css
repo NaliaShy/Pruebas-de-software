@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #141414;
+    color: white;
+}
+
+.contenedor {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.titulo-pagina {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.tabla-integrantes thead {
+    display: none;
+}
+
+.tabla-container {
+    display: flex;
+    justify-content: center;
+}
+
+.tabla-integrantes {
+    border-collapse: separate;
+}
+
+.tabla-integrantes tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.tabla-integrantes tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.tabla-integrantes tr:hover {
+    transform: scale(1.1);
+}
+
+.td-imagen img {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: border 0.3s ease;
+}
+
+.tabla-integrantes tr:hover .td-imagen img {
+    border: 3px solid white;
+}
+
+.nombre {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.rol {
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.td-imagen {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.td-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tabla-integrantes tr td {
+    text-align: center;
+}
+
+.tabla-integrantes tr td:nth-child(2) {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tabla-integrantes tr td:nth-child(3) {
+    font-size: 14px;
+    color: #b3b3b3;
+}
