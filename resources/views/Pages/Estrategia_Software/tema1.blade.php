@@ -95,44 +95,43 @@
 <body>
 
     <x-header />
-
-    <section class="contenedor induccion">
+    <section class="contenedor induccion resumen">
         <div class="texto">
-            <h2>Inducción a las pruebas de software</h2>
-            <p>
-                En esta sección encontrarás una introducción a las pruebas de software,
-                su importancia y cómo se llevan a cabo en el proceso de desarrollo.
-                Explora los siguientes temas para profundizar en cada aspecto.
-            </p>
-        </div>
-
-        <div class="temas-lista">
-            <ul>
-                <li>
-                    <a href="{{ route('induccion.tema1') }}">
-                        Las pruebas de software
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('induccion.tema2') }}">
-                        ¿Cómo se realizan las pruebas de software?
-                    </a>
-                </li>
-            </ul>
+        <h1>Estrategias de Software</h1>
+        <p> Las estrategias de software son enfoques, metodologías y prácticas que se aplican para planificar,
+            desarrollar, implementar y mantener sistemas de software de manera eficiente y competitiva. </p>
+        <h2>Principales Estrategias</h2>
+        <ul>
+            <li><strong>Metodologías ágiles:</strong> Scrum, Kanban; ciclos cortos y adaptación rápida.</li>
+            <li><strong>Definición clara de requisitos:</strong> comprender y documentar necesidades del cliente.</li>
+            <li><strong>Integración y entrega continua (CI/CD):</strong> automatizar procesos de integración y
+                despliegue.</li>
+            <li><strong>Automatización de pruebas:</strong> pruebas unitarias, de integración y funcionales.</li>
+            <li><strong>Seguridad desde el diseño:</strong> medidas de protección en cada fase del desarrollo.</li>
+            <li><strong>Uso de tecnologías modernas:</strong> contenedores, virtualización y servicios en la nube.</li>
+            <li><strong>Revisiones de código y mejora continua:</strong> fomentar colaboración y aprendizaje constante.
+            </li>
+            <li><strong>Innovación y análisis de datos:</strong> aprovechar IA y big data para decisiones informadas.
+            </li>
+        </ul>
+        <p> En resumen, las estrategias de software son el “plan maestro” que guía cómo se construye y evoluciona un
+            sistema, asegurando que cumpla con las expectativas del usuario y se mantenga vigente en un mercado
+            tecnológico cambiante. </p>
         </div>
     </section>
-<div class="navegacion-temas">
 
-    {{-- Botón para ir al tema anterior --}}
-    <a href="{{ route('Actividad_Previa') }}">
-        <button>← Tema anterior</button>
-    </a>
+    <div class="navegacion-temas">
 
-    {{-- Botón para ir al siguiente tema --}}
-    <a href="{{ route('induccion.tema1') }}">
-        <button>Tema siguiente →</button>
-    </a>
-</div>
+        {{-- Botón para ir al tema anterior --}}
+        <a href="{{ route('Estrategias_Prueba_Software.index') }}">
+            <button>← Tema anterior</button>
+        </a>
+
+        {{-- Botón para ir al siguiente tema --}}
+        <a href="{{ route('Estrategia_Software.tema2') }}">
+            <button>Tema siguiente →</button>
+        </a>
+    </div>
 
 
 </body>

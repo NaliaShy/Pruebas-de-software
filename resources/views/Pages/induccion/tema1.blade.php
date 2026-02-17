@@ -95,44 +95,43 @@
 <body>
 
     <x-header />
-
-    <section class="contenedor induccion">
+    <section class="contenedor induccion tema activo" id="tema1">
         <div class="texto">
-            <h2>Inducción a las pruebas de software</h2>
+            <h2>Las pruebas de software</h2>
             <p>
-                En esta sección encontrarás una introducción a las pruebas de software,
-                su importancia y cómo se llevan a cabo en el proceso de desarrollo.
-                Explora los siguientes temas para profundizar en cada aspecto.
+                Las pruebas de software son un proceso fundamental dentro del desarrollo de sistemas informáticos, ya
+                que permiten verificar y validar que una aplicación funcione correctamente antes de ser entregada al
+                usuario final. A través de diferentes tipos de pruebas, es posible identificar errores, fallas o
+                inconsistencias que puedan afectar el rendimiento, la seguridad o la funcionalidad del sistema.
+
+                En la actualidad, la calidad del software es un aspecto esencial, debido a que muchas actividades
+                cotidianas dependen de sistemas tecnológicos. Por esta razón, aplicar una adecuada estrategia de pruebas
+                garantiza confiabilidad, eficiencia y cumplimiento de los requisitos establecidos.
+
+                En el presente trabajo se explican los principales tipos de pruebas de software, su importancia y la
+                manera en que se aplican dentro del proceso de desarrollo, con el fin de comprender su impacto en la
+                calidad del producto final.
             </p>
         </div>
-
-        <div class="temas-lista">
-            <ul>
-                <li>
-                    <a href="{{ route('induccion.tema1') }}">
-                        Las pruebas de software
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('induccion.tema2') }}">
-                        ¿Cómo se realizan las pruebas de software?
-                    </a>
-                </li>
-            </ul>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/SDhB2Yzva-w" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
         </div>
     </section>
-<div class="navegacion-temas">
+    <div class="navegacion-temas">
 
-    {{-- Botón para ir al tema anterior --}}
-    <a href="{{ route('Actividad_Previa') }}">
-        <button>← Tema anterior</button>
-    </a>
+        {{-- Botón para ir al tema anterior --}}
+        <a href="{{ route('induccion.tema1') }}">
+            <button>← Tema anterior</button>
+        </a>
 
-    {{-- Botón para ir al siguiente tema --}}
-    <a href="{{ route('induccion.tema1') }}">
-        <button>Tema siguiente →</button>
-    </a>
-</div>
+        {{-- Botón para ir al siguiente tema --}}
+        <a href="{{ route('induccion.tema2') }}">
+            <button>Tema siguiente →</button>
+        </a>
+    </div>
 
 
 </body>

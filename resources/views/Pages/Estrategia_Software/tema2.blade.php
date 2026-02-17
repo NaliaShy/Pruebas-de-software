@@ -95,44 +95,41 @@
 <body>
 
     <x-header />
+    <section class="contenedor induccion resumen">
 
-    <section class="contenedor induccion">
-        <div class="texto">
-            <h2>Inducción a las pruebas de software</h2>
-            <p>
-                En esta sección encontrarás una introducción a las pruebas de software,
-                su importancia y cómo se llevan a cabo en el proceso de desarrollo.
-                Explora los siguientes temas para profundizar en cada aspecto.
-            </p>
-        </div>
+        <h2>2️⃣ ¿Qué pruebas se realizan en la estrategia de prueba?</h2>
 
-        <div class="temas-lista">
-            <ul>
-                <li>
-                    <a href="{{ route('induccion.tema1') }}">
-                        Las pruebas de software
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('induccion.tema2') }}">
-                        ¿Cómo se realizan las pruebas de software?
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <p>
+            En la estrategia de pruebas de software se aplican diferentes tipos de pruebas,
+            organizadas por niveles:
+        </p>
+
+        <ul>
+            <li><strong>Pruebas Unitarias:</strong> Se evalúa cada parte individual del sistema.</li>
+            <li><strong>Pruebas de Integración:</strong> Se verifica que los módulos trabajen correctamente juntos.</li>
+            <li><strong>Pruebas del Sistema:</strong> Se prueba el sistema completo.</li>
+            <li><strong>Pruebas de Aceptación:</strong> Se valida que el sistema cumpla con lo que el cliente necesita.
+            </li>
+        </ul>
+
+        <p>
+            Estas pruebas permiten detectar errores en diferentes etapas del desarrollo
+            y asegurar un producto final de mayor calidad.
+        </p>
     </section>
-<div class="navegacion-temas">
 
-    {{-- Botón para ir al tema anterior --}}
-    <a href="{{ route('Actividad_Previa') }}">
-        <button>← Tema anterior</button>
-    </a>
+    <div class="navegacion-temas">
 
-    {{-- Botón para ir al siguiente tema --}}
-    <a href="{{ route('induccion.tema1') }}">
-        <button>Tema siguiente →</button>
-    </a>
-</div>
+        {{-- Botón para ir al tema anterior --}}
+        <a href="{{ route('Estrategia_Software.tema1') }}">
+            <button>← Tema anterior</button>
+        </a>
+
+        {{-- Botón para ir al siguiente tema --}}
+        <a href="{{ route('Estrategia_Software.tema2') }}">
+            <button>Tema siguiente →</button>
+        </a>
+    </div>
 
 
 </body>

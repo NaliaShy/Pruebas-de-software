@@ -13,7 +13,7 @@ Route::get('/integrantes', function () {
 
 Route::get('/ActividadPrevia', function () {
     return view('Pages/Actividad_Previa'); 
-})->name('Actividad_Previa.index');
+})->name('Actividad_Previa');
 
 Route::get('/Induccion', function() {
     return view('Pages/Induccion');
@@ -38,3 +38,26 @@ Route::get('/Recursos', function (){
 Route::get('/Actividad_Didactica', function (){
     return view('Pages.Actividad_didactica');
 })-> name('Actividad_Didactica.index');
+
+
+
+
+//Ruta carpetas
+
+Route::get('/Induccion/tema1', function () { 
+    return view('Pages.induccion.tema1'); 
+})->name('induccion.tema1'); 
+Route::get('/Induccion/tema2', function () { 
+    return view('Pages.induccion.tema2'); 
+})->name('induccion.tema2');
+Route::get('/Induccion/tema3', function () { 
+    return view('Pages.induccion.tema3'); 
+})->name('induccion.tema3');
+
+
+Route::get('/Estrategia_Software/tema1', function () { 
+    return view('Pages.Estrategia_Software.tema1'); 
+})->name('Estrategia_Software.tema1'); 
+Route::get('/Estrategia_Software/tema2', function () { 
+    return view('Pages.Estrategia_Software.tema2'); 
+})->name('Estrategia_Software.tema2');
