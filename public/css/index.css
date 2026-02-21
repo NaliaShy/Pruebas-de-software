@@ -45,9 +45,11 @@ h1 {
 .header{
     display: flex;
     margin-top: 0;
+    max-height: 120px;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
+    z-index: 100000;
 }
 
 .header-left{

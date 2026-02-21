@@ -61,3 +61,10 @@ Route::get('/Estrategia_Software/tema1', function () {
 Route::get('/Estrategia_Software/tema2', function () { 
     return view('Pages.Estrategia_Software.tema2'); 
 })->name('Estrategia_Software.tema2');
+
+
+//Ruleta
+
+use App\Http\Controllers\RuletaController;
+
+Route::get('/ruleta/girar', [RuletaController::class, 'girar']);

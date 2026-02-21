@@ -1,0 +1,215 @@
+#ruleta {
+    transition: transform 4s ease-out;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(red 0 120deg, blue 120deg 240deg, green 240deg 360deg);
+}
+
+#contenedor-ruleta {
+    position: absolute;
+    margin: 0 auto;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #0c0707;
+}
+.main-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+}
+.container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 90%;
+    max-width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    margin-top: 60px;
+    transition: 0.3s ease;
+}
+
+#titulo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#pregunta {
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#opciones label {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: 2px solid transparent;
+}
+
+#opciones label:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+#opciones input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00c853, #00e676);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+.resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    min-height: 24px;
+}
+
+/* Cuando pierde */
+.fallo {
+    animation: shake 0.4s ease;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Overlay ruleta */
+#contenedor-ruleta {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 20px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+#contenedor-ruleta {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+/* Wrapper */
+.ruleta-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+/* Ruleta */
+.ruleta {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid white;
+    transition: transform 4s cubic-bezier(.17,.67,.21,1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+/* Centro */
+.ruleta::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Puntero minimal */
+.puntero {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 24px solid #ffffff;
+}
+
+/* Texto resultado */
+.resultado-ruleta {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,57 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Pruebas de Software</title>
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-
-    <style>
-
-        .container {
-            background: rgba(129, 129, 129, 0.7);
-            padding: 30px;
-            width: 500px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            width: 50%;
-            margin: 0 auto;
-        }
-
-        button {
-            margin-top: 15px;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            border-radius: 8px;
-            background: #00c853;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #00e676;
-        }
-
-        .resultado {
-            margin-top: 15px;
-            font-weight: bold;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/ruleta.css') }}">
 </head>
 
 <body>
     <x-header />
+    <div class="main-content">
+        <div class="container">
+            <h2 id="titulo">Pregunta 1 de 20</h2>
+            <p id="pregunta"></p>
+            <div id="opciones"></div>
+            <button onclick="verificar()">Responder</button>
+            <div class="resultado" id="resultado"></div>
+        </div>
 
-    <div class="container">
-        <h2 id="titulo">Pregunta 1 de 20</h2>
-        <p id="pregunta"></p>
-        <div id="opciones"></div>
-        <button onclick="verificar()">Responder</button>
-        <div class="resultado" id="resultado"></div>
+        <div id="contenedor-ruleta" style="display:none;">
+            <x-Ruleta />
+        </div>
+
     </div>
+
 
     <script>
         const preguntas = [{
@@ -165,8 +139,7 @@
             let opcionesHTML = "";
             preguntas[indice].opciones.forEach((opcion, i) => {
                 opcionesHTML += `
-        <input type="radio" name="opcion" value="${i}"> ${opcion}<br><br>
-        `;
+                <label><input type="radio" name="opcion" value="${i}">${opcion}</label>`;
             });
 
             document.getElementById("opciones").innerHTML = opcionesHTML;
@@ -189,7 +162,18 @@
                         "<h2>🏆 ¡FELICITACIONES!</h2><p>Has completado correctamente las 20 preguntas.</p>";
                 }
             } else {
-                document.getElementById("resultado").innerText = "❌ Incorrecto, intenta nuevamente.";
+                document.getElementById("resultado").innerText = "❌ Incorrecto... gira la ruleta 😈";
+
+                // Mostrar ruleta
+                document.getElementById("contenedor-ruleta").style.display = "block";
+
+                // Opcional: ocultar preguntas mientras gira
+                document.querySelector(".container").style.opacity = "0.3";
+
+                // Llamar automáticamente a girar
+                setTimeout(() => {
+                    girar();
+                }, 800);
             }
         }
 
